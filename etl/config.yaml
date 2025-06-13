@@ -1,0 +1,13 @@
+input_path: data/raw.csv
+output_path: data/cleaned.csv
+missing_value_strategy: fill
+fill_value: 0
+outlier_columns: ['age', 'salary']
+categorical_columns: ['department']
+scaling_columns: ['age', 'salary']
+convert_dtypes:
+  id: int
+  name: str
+  age: float
+  salary: float
+  department: str

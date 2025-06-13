@@ -1,0 +1,56 @@
+2025-06-13 16:10:59,619 - INFO - Scheduler started
+2025-06-13 16:10:59,669 - INFO - Successfully connected to SQLite database
+2025-06-13 16:10:59,714 - INFO - Database tables created successfully in SQLite
+2025-06-13 16:10:59,777 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.71.171:5000
+2025-06-13 16:10:59,778 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-13 16:10:59,781 - INFO -  * Restarting with stat
+2025-06-13 16:11:03,203 - INFO - Scheduler started
+2025-06-13 16:11:03,230 - INFO - Successfully connected to SQLite database
+2025-06-13 16:11:03,232 - INFO - Database tables created successfully in SQLite
+2025-06-13 16:11:03,250 - WARNING -  * Debugger is active!
+2025-06-13 16:11:03,260 - INFO -  * Debugger PIN: 111-877-948
+2025-06-13 16:11:33,523 - INFO - 127.0.0.1 - - [13/Jun/2025 16:11:33] "GET / HTTP/1.1" 200 -
+2025-06-13 16:11:33,744 - INFO - 127.0.0.1 - - [13/Jun/2025 16:11:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-13 16:11:44,579 - INFO - Starting data cleaning process
+2025-06-13 16:11:44,750 - INFO - Data cleaning completed. Processed 275 -> 259 rows
+2025-06-13 16:11:45,138 - INFO - Successfully connected to SQLite database
+2025-06-13 16:11:45,195 - INFO - Data saved to SQLite table: coin_aave
+2025-06-13 16:11:45,195 - ERROR - Error saving processing job: Object of type int64 is not JSON serializable
+2025-06-13 16:11:45,242 - INFO - 127.0.0.1 - - [13/Jun/2025 16:11:45] "POST / HTTP/1.1" 200 -
+2025-06-13 16:11:45,298 - INFO - 127.0.0.1 - - [13/Jun/2025 16:11:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-13 16:13:22,930 - INFO - 127.0.0.1 - - [13/Jun/2025 16:13:22] "GET / HTTP/1.1" 200 -
+2025-06-13 16:13:23,000 - INFO - 127.0.0.1 - - [13/Jun/2025 16:13:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-13 16:13:40,270 - INFO - Starting data cleaning process
+2025-06-13 16:13:40,508 - INFO - Data cleaning completed. Processed 275 -> 259 rows
+2025-06-13 16:13:40,822 - INFO - Successfully connected to SQLite database
+2025-06-13 16:13:40,924 - INFO - Data saved to SQLite table: cleaned_coin_aave
+2025-06-13 16:13:40,928 - ERROR - Error saving processing job: Object of type int64 is not JSON serializable
+2025-06-13 16:13:40,978 - INFO - 127.0.0.1 - - [13/Jun/2025 16:13:40] "POST / HTTP/1.1" 200 -
+2025-06-13 16:13:41,042 - INFO - 127.0.0.1 - - [13/Jun/2025 16:13:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-13 16:13:55,453 - INFO - 127.0.0.1 - - [13/Jun/2025 16:13:55] "GET / HTTP/1.1" 200 -
+2025-06-13 16:13:55,502 - INFO - 127.0.0.1 - - [13/Jun/2025 16:13:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-13 16:14:41,217 - INFO - 127.0.0.1 - - [13/Jun/2025 16:14:41] "GET / HTTP/1.1" 200 -
+2025-06-13 16:14:41,265 - INFO - 127.0.0.1 - - [13/Jun/2025 16:14:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-13 16:15:23,850 - INFO - 127.0.0.1 - - [13/Jun/2025 16:15:23] "GET / HTTP/1.1" 200 -
+2025-06-13 16:15:23,898 - INFO - 127.0.0.1 - - [13/Jun/2025 16:15:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-13 16:15:33,602 - INFO - Starting data cleaning process
+2025-06-13 16:15:33,674 - INFO - Data cleaning completed. Processed 275 -> 259 rows
+2025-06-13 16:15:33,838 - INFO - Successfully connected to SQLite database
+2025-06-13 16:15:33,945 - INFO - Data saved to SQLite table: cleaned_coin_aave
+2025-06-13 16:15:33,946 - ERROR - Error saving processing job: Object of type int64 is not JSON serializable
+2025-06-13 16:15:33,971 - INFO - 127.0.0.1 - - [13/Jun/2025 16:15:33] "POST / HTTP/1.1" 200 -
+2025-06-13 16:15:34,007 - INFO - 127.0.0.1 - - [13/Jun/2025 16:15:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-13 16:15:40,057 - INFO - 127.0.0.1 - - [13/Jun/2025 16:15:40] "GET / HTTP/1.1" 200 -
+2025-06-13 16:15:40,102 - INFO - 127.0.0.1 - - [13/Jun/2025 16:15:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-13 16:33:19,751 - INFO - 127.0.0.1 - - [13/Jun/2025 16:33:19] "GET / HTTP/1.1" 200 -
+2025-06-13 16:33:19,802 - INFO - 127.0.0.1 - - [13/Jun/2025 16:33:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-13 16:45:47,135 - INFO - Starting data cleaning process
+2025-06-13 16:45:47,190 - INFO - Data cleaning completed. Processed 275 -> 259 rows
+2025-06-13 16:45:47,301 - INFO - Successfully connected to SQLite database
+2025-06-13 16:45:47,396 - INFO - Data saved to SQLite table: cleaned_coin_aave
+2025-06-13 16:45:47,396 - ERROR - Error saving processing job: Object of type int64 is not JSON serializable
+2025-06-13 16:45:47,433 - INFO - 127.0.0.1 - - [13/Jun/2025 16:45:47] "POST / HTTP/1.1" 200 -
+2025-06-13 16:45:47,497 - INFO - 127.0.0.1 - - [13/Jun/2025 16:45:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -

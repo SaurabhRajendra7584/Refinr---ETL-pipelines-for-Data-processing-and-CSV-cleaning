@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refiner - ETL WebApp</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-database"></i>
+                <span>Refiner ETL</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="result.htmlg" class="nav-link">Results</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="social-links">
+                <a href="https://github.com/SaurabhRajendra7584" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/saurabhrajendradubey" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="hero-section">
+            <div class="floating-particles"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Refinr ETL</span>
+                        <br>Data Processing Made Simple
+                    </h1>
+                    <p class="hero-subtitle">
+                        Transform your raw datasets into clean, structured data with our powerful ETL pipeline
+                    </p>
+                    
+                    <div class="upload-section">
+                        <form action="/" method="post" enctype="multipart/form-data" class="upload-form">
+                            <div class="file-upload-wrapper">
+                                <input type="file" name="file" id="file-input" class="file-input" required accept=".csv,.xlsx,.json">
+                                <label for="file-input" class="file-label">
+                                    <div class="upload-icon">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                    </div>
+                                    <div class="upload-text">
+                                        <span class="upload-main">Choose your dataset</span>
+                                        <span class="upload-sub">or drag and drop files here</span>
+                                    </div>
+                                </label>
+                                <div class="file-info"></div>
+                            </div>
+                            <button type="submit" class="process-btn">
+                                <i class="fas fa-magic"></i>
+                                <span>Process Dataset</span>
+                                <div class="btn-overlay"></div>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-broom"></i>
+                            </div>
+                            <h3>Data Cleaning</h3>
+                            <p>Remove duplicates, handle missing values, and standardize formats</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Analysis Ready</h3>
+                            <p>Get your data in perfect shape for analysis and visualization</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <h3>Multiple Formats</h3>
+                            <p>Export processed data in CSV, JSON, or Excel formats</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Created by</h3>
+                <p class="developer-name">Saurabh Rajendra Dubey</p>
+                <div class="social-footer">
+                    <a href="https://github.com/SaurabhRajendra7584" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/saurabhrajendradubey" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Refinr ETL</h3>
+                <p>Transforming data, empowering insights</p>
+                <p class="copyright">&copy; 2025 All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // File upload interactions
+        const fileInput = document.getElementById('file-input');
+        const fileLabel = document.querySelector('.file-label');
+        const fileInfo = document.querySelector('.file-info');
+        const uploadForm = document.querySelector('.upload-form');
+
+        // File input change handler
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                fileInfo.innerHTML = `
+                    <div class="file-selected">
+                        <i class="fas fa-file-alt"></i>
+                        <span>${file.name}</span>
+                        <small>(${(file.size / 1024 / 1024).toFixed(2)} MB)</small>
+                    </div>
+                `;
+                fileLabel.classList.add('has-file');
+            }
+        });
+
+        // Drag and drop functionality
+        fileLabel.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            this.classList.add('drag-over');
+        });
+
+        fileLabel.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            this.classList.remove('drag-over');
+        });
+
+        fileLabel.addEventListener('drop', function(e) {
+            e.preventDefault();
+            this.classList.remove('drag-over');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                fileInput.dispatchEvent(new Event('change'));
+            }
+        });
+
+        // Form submission with loading state
+        uploadForm.addEventListener('submit', function(e) {
+            const btn = this.querySelector('.process-btn');
+            btn.classList.add('loading');
+            btn.innerHTML = `
+                <i class="fas fa-spinner fa-spin"></i>
+                <span>Processing...</span>
+            `;
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Floating particles animation
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            particle.style.opacity = Math.random() * 0.5 + 0.1;
+            document.querySelector('.floating-particles').appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 5000);
+        }
+
+        // Create particles periodically
+        setInterval(createParticle, 300);
+    </script>
+</body>
+</html>

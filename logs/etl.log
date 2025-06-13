@@ -1,0 +1,37 @@
+2025-06-12 19:26:45,717 - INFO - Successfully read CSV: data/raw.csv
+2025-06-12 19:26:45,720 - INFO - Missing values handled
+2025-06-12 19:26:45,744 - INFO - Outliers removed using IQR
+2025-06-12 19:26:45,758 - INFO - Categorical encoding done
+2025-06-12 19:26:45,761 - ERROR - Error converting data types: 'department'
+2025-06-12 19:26:45,765 - INFO - Numeric scaling done
+2025-06-12 19:26:45,771 - INFO - Saved cleaned data to: data/cleaned.csv
+2025-06-12 19:26:45,771 - INFO - ETL Pipeline Completed Successfully
+2025-06-13 14:26:01,471 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-13 14:26:01,474 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-13 14:26:01,478 - INFO -  * Restarting with stat
+2025-06-13 14:26:04,040 - WARNING -  * Debugger is active!
+2025-06-13 14:26:04,104 - INFO -  * Debugger PIN: 111-877-948
+2025-06-13 14:28:09,844 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-13 14:28:09,845 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-13 14:28:09,846 - INFO -  * Restarting with stat
+2025-06-13 14:28:12,041 - WARNING -  * Debugger is active!
+2025-06-13 14:28:12,050 - INFO -  * Debugger PIN: 111-877-948
+2025-06-13 14:30:51,843 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-13 14:30:51,844 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-13 14:30:51,845 - INFO -  * Restarting with stat
+2025-06-13 14:30:53,596 - WARNING -  * Debugger is active!
+2025-06-13 14:30:53,599 - INFO -  * Debugger PIN: 111-877-948
+2025-06-13 14:34:53,840 - INFO - 127.0.0.1 - - [13/Jun/2025 14:34:53] "GET / HTTP/1.1" 200 -
+2025-06-13 14:34:54,272 - INFO - 127.0.0.1 - - [13/Jun/2025 14:34:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-13 14:35:24,943 - INFO - Missing values handled
+2025-06-13 14:35:24,950 - INFO - File processed: coin_Aave.csv
+2025-06-13 14:35:24,956 - INFO - 127.0.0.1 - - [13/Jun/2025 14:35:24] "POST /upload HTTP/1.1" 200 -
+2025-06-13 14:35:25,174 - INFO - Missing values handled
+2025-06-13 14:35:25,182 - INFO - File processed: coin_Aave.csv
+2025-06-13 14:35:25,182 - INFO - 127.0.0.1 - - [13/Jun/2025 14:35:25] "POST /upload HTTP/1.1" 200 -
+2025-06-13 14:35:28,394 - INFO - 127.0.0.1 - - [13/Jun/2025 14:35:28] "GET /download/cleaned_coin_Aave.csv HTTP/1.1" 200 -
+2025-06-13 14:39:31,942 - INFO -  * Detected change in 'C:\\Users\\Saurabh\\OneDrive\\Desktop\\Projects\\ETL_project\\app.py', reloading
+2025-06-13 14:39:32,262 - INFO -  * Restarting with stat
